@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { todoReducer } from './state/todos/todo.reducer';
 import { TodoEffects } from './state/todos/todo.effects';
+import { bookReducer } from './state/books/book.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +24,7 @@ import { TodoEffects } from './state/todos/todo.effects';
     IonicModule.forRoot(),
     AppRoutingModule,
     IonicStorageModule.forRoot(),
-    StoreModule.forRoot({ todos: todoReducer }),
+    StoreModule.forRoot({ todos: todoReducer,books:bookReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
