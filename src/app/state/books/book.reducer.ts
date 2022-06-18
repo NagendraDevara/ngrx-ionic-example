@@ -4,10 +4,14 @@ import { addBook, removeBook } from "./book.action";
 
 export interface BooksState {
     books: BOOK[];
+    error:string,
+    status: 'pending' | 'loading' | 'error' | 'success';
 }
 
 export const booksInitialState: BooksState = {
-    books: []
+    books: [],
+    error:null,
+    status: 'pending'
 };
 
 export const bookReducer = createReducer(

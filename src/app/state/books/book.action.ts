@@ -10,4 +10,4 @@ export const addBook = createAction(
     '[Book Page] Remove Book',
     props<{ id: string }>()
   );
-  export const loadTodos = createAction('[Book Page] Load Books');
+  export const loadBooks = createAction('[Book Page] Load Books');
